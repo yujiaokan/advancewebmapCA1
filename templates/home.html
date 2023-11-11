@@ -75,7 +75,7 @@
                     });
 
 
-                var noteSubmitUrl = "{% url 'notedb' %}"; // Make sure 'notedb' is the name of your URL pattern in urls.py
+                var noteSubmitUrl = "{% url 'notedb' %}"; 
 
                 <!-- In map event handler -->
                 map.on('click', function(e) {
@@ -83,7 +83,7 @@
                   const lng = e.latlng.lng;
 
                   // Prepare the CSRF token
-                  const csrftoken = getCookie('csrftoken'); // You need to define the getCookie function to fetch the CSRF token from cookies
+                  const csrftoken = getCookie('csrftoken'); 
 
                   // Use backticks for template literals and ${} to inject variables
                   const formHtml = `
