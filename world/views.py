@@ -38,7 +38,7 @@ def note(request):
     if request.method == 'POST':
         print(request.POST.get('note_heading'))
         note_heading = request.POST.get('note_heading')
-        note_des = request.POST.get('note_des')  # Changed to 'note_des' as per your form's textarea name
+        note_des = request.POST.get('note_des')  
         lat = request.POST.get('lat')
         lng = request.POST.get('lng')
 
