@@ -7,7 +7,7 @@ from . import models
 from .models import Note
 
 
-# Create your views here.
+# Create views here.
 
 
 class HomeView(generic.View):
