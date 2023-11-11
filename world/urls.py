@@ -14,4 +14,3 @@ urlpatterns = [
 ]
 
 
-# path('', include('world.urls')),
