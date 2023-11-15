@@ -106,6 +106,13 @@
                   const marker = L.marker([lat, lng]).bindPopup(formHtml);
                   marker.addTo(map);
                 });
+                   var markergroup = new L.featureGroup()
+                    {% for n in notes %}
+                        var lati = {{ n.lat }}
+                        var lngi = {{ n.lng }}
+                        var marker= L.marker([lati,lngi]).addTo(map).bindPopup("{{ n.note_heading }}"  + " {{ n.note }}")
+                        marker.addTo(markergroup)
+                    {% endfor %}
                 }
                 function getCookie(name) {
                     let cookieValue = null;
